@@ -5,45 +5,20 @@
     android:layout_height="wrap_content"
     android:padding="5dp">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv01"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
-        android:background="@color/grey"
-        android:gravity=""
-        android:hint="tv01 hint text"
-        android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv02"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
-        android:background="@color/grey"
-        android:gravity=""
-
-        android:hint="tv02 hint text"
-        android:paddingStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv01" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv03"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="30dp"
+        android:hint="Name"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
-        android:background="@color/grey"
-        android:gravity=""
+        android:layout_height="wrap_content">
 
-        android:hint="tv03 hint text"
-        android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv02" />
-
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.assignment_005.databinding.FragmentMainBinding
 
 
@@ -17,7 +16,11 @@ class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
+    private val adapter = BigItemsAdapter()
+    //private val layoutManager=GridLayoutManager(context,1)
+    private val layoutManager=LinearLayoutManager(context)
 
+    private val list= mutableListOf(1,2,3,4,5,6,7,8,9,1,2,3,4)
 
     private val viewModel: MainViewModel by viewModels()
 
@@ -30,12 +33,18 @@ class MainFragment : Fragment() {
 
 
 
+        adapter.setData(list)
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = layoutManager
 
 
         viewModel.parsedJSON()
         val data = viewModel.parsedJSON.value
         Log.d("---", "$data")
         binding.tv01.text = data.toString()
+
+
+
 
 
 
