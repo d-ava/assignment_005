@@ -9,8 +9,12 @@ import com.example.assignment_005.databinding.BigItemBinding
 
 class BigItemsAdapter : RecyclerView.Adapter<BigItemsAdapter.BigItemsViewHolder>() {
 
-    private val list = mutableListOf<Int>()
-    fun setData(list: MutableList<Int>) {
+
+
+    //private val list = mutableListOf<Int>()
+    var list:MutableList<List<Item.ItemSubList.ItemSubListItem>> = mutableListOf()
+    //var list = mutableListOf<List<List<Item.ItemSubList.ItemSubListItem>>>()
+    fun setData(list: List<List<Item.ItemSubList.ItemSubListItem>>) {
         this.list.clear()
         this.list.addAll(list)
         notifyDataSetChanged()
@@ -37,16 +41,19 @@ class BigItemsAdapter : RecyclerView.Adapter<BigItemsAdapter.BigItemsViewHolder>
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind() {
-            binding.tvTitle.text = list[adapterPosition].toString()
+          //  binding.tvTitle.text = list[adapterPosition].toString()
             //binding.bigRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
-            binding.bigRecyclerView.layoutManager = GridLayoutManager(itemView.context,1)
+            binding.bigRecyclerView.layoutManager = LinearLayoutManager(itemView.context,RecyclerView.VERTICAL, false)
             val smallAdapter = SmallItemsAdapter()
-            smallAdapter.setData(list)
+            smallAdapter.setData(list[adapterPosition])
             binding.bigRecyclerView.adapter = smallAdapter
+
 
         }
 
     }
+
+
 
 
 }

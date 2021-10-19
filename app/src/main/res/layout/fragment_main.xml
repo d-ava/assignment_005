@@ -12,23 +12,20 @@
 
 
 
-
-
-
-
-
     <TextView
         android:id="@+id/tv01"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="1"
+        android:text="Recycler View"
         android:background="@color/grey"
         android:textSize="12sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:background="@color/grey"
+
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp" />
