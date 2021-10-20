@@ -41,10 +41,11 @@ class BigItemsAdapter : RecyclerView.Adapter<BigItemsAdapter.BigItemsViewHolder>
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind() {
-          //  binding.tvTitle.text = list[adapterPosition].toString()
-            //binding.bigRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
+
             binding.bigRecyclerView.layoutManager = LinearLayoutManager(itemView.context,RecyclerView.VERTICAL, false)
-            val smallAdapter = SmallItemsAdapter()
+
+            val smallAdapter = SmallAdapter()
+
             smallAdapter.setData(list[adapterPosition])
             binding.bigRecyclerView.adapter = smallAdapter
 

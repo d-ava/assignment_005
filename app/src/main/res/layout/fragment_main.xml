@@ -11,23 +11,43 @@
     >
 
 
-
     <TextView
         android:id="@+id/tv01"
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Recycler View"
         android:background="@color/grey"
+        android:text="Recycler View"
         android:textSize="12sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp" />
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:background="@color/grey"
+
+        android:text="REGISTER"/>
+
+    <TextView
+        android:id="@+id/tvTestScreen"
+        android:layout_width="match_parent"
+
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/grey"
+        android:text="Test Screen"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:textSize="12sp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

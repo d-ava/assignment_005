@@ -8,9 +8,7 @@ import com.google.gson.Gson
 class MainViewModel : ViewModel() {
 
 
-    /*private var _parsedJSON = MutableLiveData<Item>()
-    val parsedJSON: LiveData<Item>
-        get() = _parsedJSON*/
+
 
     private var _parsedJSON = MutableLiveData<List<List<Item.ItemSubList.ItemSubListItem>>>()
     val parsedJSON: LiveData<List<List<Item.ItemSubList.ItemSubListItem>>>

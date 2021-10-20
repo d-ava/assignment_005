@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.children
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.assignment_005.databinding.FragmentMainBinding
@@ -36,9 +37,20 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainViewModel>(FragmentMa
 
 
         val data = viewModel.parsedJSON.value
-        Log.d("---", "$data")
-        // binding.tv01.text = data.toString()
+        //Log.d("---", "$data")
 
+        val testList = mutableListOf<String>()
+
+        for (item in binding.recyclerView.children){
+            testList.add(item.toString())
+        }
+
+
+
+        binding.btnRegister.setOnClickListener {
+
+
+        }
 
         viewModel.parsedJSON.observe(viewLifecycleOwner) {
             adapter.setData(it)
